@@ -11,7 +11,7 @@ int main() {
     // inzia il ciclo, ad ogni ripetizione la variabile input viene sovrascritta
     for (i<n, i++)
     {
-        cin>>input;
+        std::cin>>input;
         // la prima volta che il ciclo gira le variabili maggiore e minore vengono popolate col primo input così da non dover usare una valore arbitrario
         if (i==0)
         {
@@ -34,10 +34,10 @@ int main() {
     media = totale/n;
     differenza = maggiore-minore;
     
-    cout>>"Il numero maggiore è: " + maggiore;
-    cout>>"Il numero minore è: " + minore;
-    cout>>"La differenza tra i due è: " + differenza;
-    cout>>"La media tra i due è: " + media;
+    std::cout>>"Il numero maggiore è: " + maggiore;
+    std::cout>>"Il numero minore è: " + minore;
+    std::cout>>"La differenza tra i due è: " + differenza;
+    std::cout>>"La media tra i due è: " + media;
     
-    return;
+    return 0;
 }
