@@ -1,10 +1,10 @@
-// Online C++ compiler to run C++ program online
+/*Autore: Stefano Buscema; Classe 2DS; Data: 2/8/23*/
 #include <iostream>
 
 int main() {
     int n = 0, input = 0, maggiore = 0, minore = 0, differenza = 0, totale = 0 ;
-    // media dichiarata come floating point var perchè da un valore più preciso
-    float media = 0;
+    float media = 0; // media dichiarata come floating point var perchè da un valore più preciso
+
     std::cout<<"Quanti numeri vuoi inserire? ";
     std::cin>>n;
     
@@ -32,6 +32,7 @@ int main() {
         
         totale += input;
     }
+
     media = totale/n;
     differenza = maggiore-minore;
     
@@ -40,6 +41,5 @@ int main() {
     std::cout << "La differenza tra i due è: " << differenza << std::endl;
     std::cout << "La media tra i due è: " << media << std::endl;
 
-    
     return 0;
 }
