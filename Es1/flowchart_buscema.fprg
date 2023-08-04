@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="aless"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-08-04 02:58:56 "/>
+        <attribute name="created" value="YWxlc3M7TEFQVE9QLURJLUFVUk9SOzIwMjMtMDgtMDQ7IjAyOjQ1OjQ0ICI7MjgxNw=="/>
+        <attribute name="edited" value="YWxlc3M7TEFQVE9QLURJLUFVUk9SOzIwMjMtMDgtMDQ7IjAyOjU4OjU2ICI7MTsyOTMy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, input, maggiore, minore, differenza, totale" type="Integer" array="False" size=""/>
+            <declare name="media" type="Real" array="False" size=""/>
+            <output expression="&quot;Quanti numeri vuoi inserire?&quot;" newline="True"/>
+            <input variable="n"/>
+            <for variable="i" start="0" end="n" direction="inc" step="1">
+                <output expression="&quot;Inserire un numero:&quot;" newline="True"/>
+                <input variable="input"/>
+                <if expression="i == 0">
+                    <then>
+                        <assign variable="maggiore" expression="input"/>
+                        <assign variable="minore" expression="input"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="input &gt; maggiore">
+                    <then>
+                        <assign variable="maggiore" expression="input"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="input &lt; minore">
+                    <then>
+                        <assign variable="minore" expression="input"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="totale" expression="totale + input"/>
+            </for>
+            <assign variable="media" expression="totale/n"/>
+            <assign variable="differenza" expression="maggiore-minore"/>
+            <output expression="&quot;Il numero maggiore &#232;: &quot; + maggiore + &#13;&#10;&quot;Il numero minore &#232;: &quot; + minore +&#13;&#10;&quot;La differenza tra i due numeri &#232;: &quot; + differenza + &#13;&#10;&quot;La media tra i due numeri &#232;: &quot; + media" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
