@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="aless"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-08-05 02:56:31 "/>
+        <attribute name="created" value="YWxlc3M7TEFQVE9QLURJLUFVUk9SOzIwMjMtMDgtMDU7IjAyOjM0OjA0ICI7MjgxMg=="/>
+        <attribute name="edited" value="YWxlc3M7TEFQVE9QLURJLUFVUk9SOzIwMjMtMDgtMDU7IjAyOjU2OjMxICI7MTsyOTI0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nome" type="String" array="False" size=""/>
+            <declare name="lavoratori, pensionati, nonLavoratori, n, totLavoratori, totPensionati, totNonLavoratori, totCittadini" type="Integer" array="False" size=""/>
+            <declare name="percLavoratori, percPensionati, percNonLavoratori" type="Integer" array="False" size=""/>
+            <output expression="&quot;Quante citt&#224; vuoi inserire?&quot;" newline="True"/>
+            <input variable="n"/>
+            <for variable="i" start="0" end="n" direction="inc" step="1">
+                <comment text="Raccolta dati"/>
+                <output expression="&quot;Inserisci il nome della citt&#224; numero &quot; + (i+1) + &quot;:&quot;" newline="True"/>
+                <input variable="nome"/>
+                <output expression="&quot;Inserisci il numero dei lavoratori: &quot;" newline="True"/>
+                <input variable="lavoratori"/>
+                <output expression="&quot;Inserisci il numero di pensionati: &quot;" newline="True"/>
+                <input variable="pensionati"/>
+                <output expression="&quot;Inserisci il numero di non lavoratori: &quot;" newline="True"/>
+                <input variable="nonLavoratori"/>
+                <comment text="Calcolo totale"/>
+                <assign variable="totLavoratori" expression="totLavoratori + lavoratori"/>
+                <assign variable="totPensionati" expression="totPensionati + pensionati"/>
+                <assign variable="totNonLavoratori" expression="totNonLavoratori + nonLavoratori"/>
+                <assign variable="totCittadini" expression="totCittadini + lavoratori + pensionati + nonLavoratori"/>
+                <comment text="Calcoli percentuale"/>
+                <assign variable="percLavoratori" expression="lavoratori/totCittadini*100"/>
+                <assign variable="percPensionati" expression="pensionati/totCittadini*100"/>
+                <assign variable="percNonLavoratori" expression="nonLavoratori/totCittadini*100"/>
+                <comment text="Output dati citt&#224; singola"/>
+                <output expression="&quot;Il nome della citt&#224; &#232;: &quot; + nome +&#13;&#10;&quot;La percentuale di lavoratori &#232;: &quot; + percLavoratori +&#13;&#10;&quot;La percentuale di pensionati &#232;: &quot; + percPensionati + &#13;&#10;&quot;La percentuale di non lavoratori &#232;: &quot; + percNonLavoratori" newline="True"/>
+            </for>
+            <comment text="Output dati totali"/>
+            <output expression="&quot;Il numero totale di lavoratori, tra tutte le citt&#224; &#232;: &quot; + totLavoratori +&#13;&#10;&quot;Il numero totale di pensionati, tra tutte le citt&#224; &#232;: &quot; + totPensionati + &#13;&#10;&quot;Il numero totale di non lavoratori, tra tutte le citt&#224; &#232;: &quot; + totNonLavoratori" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
