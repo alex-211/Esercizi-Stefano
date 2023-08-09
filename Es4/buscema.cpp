@@ -15,5 +15,5 @@ int main() {
         }
     }
     while (input != 0);
-    std::cout<<"Il numero maggiore è: " + maggiore;
+    std::cout<<"Il numero maggiore è: " << maggiore;
 }
